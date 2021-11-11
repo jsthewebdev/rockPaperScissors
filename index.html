@@ -5,9 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock Paper Scissors</title>
-    <script src="scripts.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
+    <div class="startScreen">
+        <div class="startScreenContainer">
+            <h1>Rock Paper Scissors</h1>
+            <h2>Player VS Computer</h2>
+            <button class="playBtn" onclick="startPlay()">PLAY</button>
+        </div>
+    </div>
+    <div class="playScreen hide">
+        <div class="playScreenContainer">
+            
+            <div class="play2">
+                <h1>Choose your Weapon!</h1>
+            </div>
+            <div class="play1">
+                <div class="btndiv">
+                    <button class="ROCK selBtn" onclick="selectItem(this)">Rock</button>
+                    <button class="PAPER selBtn" onclick="selectItem(this)">Paper</button>
+                    <button class="SCISSORS selBtn" onclick="selectItem(this)">Scissors</button>
+                    <button class="submitBtn" onclick="submitChoice()">Submit!</button>
+                </div>
+            </div>
+            
+
+            
+        </div>
+    </div>
+    <div class="endScreen hide">
+        <div class="winner">
+            <p>This round's winner is:</p>
+            <p id="resultsPlaceholder">placeholder</p>
+        </div>
+        
+        <button class="nextRoundBtn" onclick="nextRound()">Next round</button>
+    </div>
+
+    <div class="scoreDiv">
+        <h1>Score:</h1>
+        <p>Computer: </p>
+        <p id="computerScoreParagraph">0</p>
+        <p>Player: </p>
+        <p id="playerScoreParagraph">0</p>
+    </div>
+    <script src="scripts.js"></script>
 </body>
 </html>
